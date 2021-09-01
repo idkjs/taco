@@ -28,14 +28,13 @@
     "@davesnx/styled-ppx": "1.5.1-248424b.0",
     "bs-css-emotion": "^2.5.1",
     "bs-webapi": "^0.15.6",
-    "gentype": "3.13.0",
+    "gentype": "^4.1.0",
     "re-classnames": "^4.1.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "reason-react": "^0.9.1"
   },
   "devDependencies": {
-    "autoprefixer": "^9.7.3",
     "@glennsl/bs-jest": "^0.4.9",
     "@storybook/addon-actions": "^6.1.11",
     "@storybook/addon-knobs": "^6.1.11",
@@ -43,6 +42,7 @@
     "@storybook/addon-options": "^5.3.21",
     "@storybook/addons": "^6.1.11",
     "@storybook/react": "^6.1.11",
+    "autoprefixer": "^9.7.3",
     "babel-loader": "^8.1.0",
     "bs-platform": "^7.3.2",
     "bs-react-testing-library": "^0.6.0",
