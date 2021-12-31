@@ -30,4 +30,4 @@ module Spacers = {
 
 let module_ = [%bs.raw "module"];
 
-Story.(storiesOf("Spacer", module_)->(add("Spacer", () => <Spacers />)));
+let _ = Story.(storiesOf("Spacer", module_)->(add("Spacer", () => <Spacers />)));

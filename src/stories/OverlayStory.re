@@ -39,4 +39,4 @@ module Overlays = {
 
 let module_ = [%bs.raw "module"];
 
-Story.(storiesOf("Overlay", module_)->(add("Overlay", () => <Overlays />)));
+let _ = Story.(storiesOf("Overlay", module_)->(add("Overlay", () => <Overlays />)));

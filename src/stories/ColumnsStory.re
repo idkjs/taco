@@ -326,4 +326,4 @@ module Columnes = {
 
 let module_ = [%bs.raw "module"];
 
-Story.(storiesOf("Columns", module_)->(add("Columns", () => <Columnes />)));
+let _ = Story.(storiesOf("Columns", module_)->(add("Columns", () => <Columnes />)));

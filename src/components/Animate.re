@@ -2,9 +2,9 @@
 let make = (~play=false, ~children) => {
 
   if (play) {
-    <Wrapper name="Animate">
+    <DataAttribute name="Animate">
       children
-    </Wrapper>
+    </DataAttribute>
   } else {
     React.null
   };

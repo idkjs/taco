@@ -77,6 +77,6 @@ module Scrollers = {
 
 let module_ = [%bs.raw "module"];
 
-Story.(
+let _ = Story.(
   storiesOf("Scroller", module_)->(add("Scroller", () => <Scrollers />))
 );

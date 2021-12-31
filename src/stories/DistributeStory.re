@@ -557,7 +557,7 @@ module Rows = {
 
 let module_ = [%bs.raw "module"];
 
-Story.(
+let _ =Story.(
   storiesOf("Distribute", module_)
   ->(add("Stack", () => <Stacks />))
   ->(add("Row", () => <Rows />))

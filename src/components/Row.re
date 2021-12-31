@@ -17,7 +17,7 @@ let gapStyles = (~unit, ~fit) => {
   let gap = Unit.toPx(unit * 4);
 
   switch (fit) {
-  | true => [%cx {|
+  | true => [%css {|
       & > * {
         flex: 1 1 0%;
         margin-left: $gap;
@@ -27,7 +27,7 @@ let gapStyles = (~unit, ~fit) => {
         margin-left: 0px;
       };
     |}]
-  | false => [%cx {|
+  | false => [%css {|
       & > * {
         flex: 0 0 auto;
         margin-left: $gap;
@@ -53,26 +53,26 @@ let make =
     ) => {
   let className =
     Cn.make([
-      [%cx "display: flex; flex-direction: row;"],
-      fullHeight ? [%cx "height: 100%"] : [%cx "height: auto"],
-      fullWidth ? [%cx "width: 100%"] : [%cx "width: auto"],
+      [%css "display: flex; flex-direction: row;"],
+      fullHeight ? [%css "height: 100%"] : [%css "height: auto"],
+      fullWidth ? [%css "width: 100%"] : [%css "width: auto"],
       switch (align) {
-      | `Start => [%cx "align-items: flex-start"]
-      | `Center => [%cx "align-items: center"]
-      | `End => [%cx "align-items: flex-end"]
+      | `Start => [%css "align-items: flex-start"]
+      | `Center => [%css "align-items: center"]
+      | `End => [%css "align-items: flex-end"]
       },
       switch (distribute) {
-      | `Around => [%cx "justify-content: space-around"]
-      | `Between => [%cx "justify-content: space-between"]
-      | `Evenly => [%cx "justify-content: space-evenly"]
-      | `Start => [%cx "justify-content: flex-start"]
-      | `Center => [%cx "justify-content: center"]
-      | `End => [%cx "justify-content: flex-end"]
+      | `Around => [%css "justify-content: space-around"]
+      | `Between => [%css "justify-content: space-between"]
+      | `Evenly => [%css "justify-content: space-evenly"]
+      | `Start => [%css "justify-content: flex-start"]
+      | `Center => [%css "justify-content: center"]
+      | `End => [%css "justify-content: flex-end"]
       },
       gapStyles(~unit=gap, ~fit=false),
     ]);
 
-  <Wrapper name="Row">
+  <DataAttribute name="Row">
     <div className> children </div>
-  </Wrapper>
+  </DataAttribute>
 };

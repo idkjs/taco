@@ -74,19 +74,19 @@ let make =
     ) => {
   let className =
     Cn.make([
-      [%cx "position: relative; flex-shrink: 0;"],
-      Belt.Option.isSome(onClick) ? [%cx "cursor: pointer;"] : "",
+      [%css "position: relative; flex-shrink: 0;"],
+      Belt.Option.isSome(onClick) ? [%css "cursor: pointer;"] : "",
       Unit.Size.Height.styles(height),
       Unit.Size.Width.styles(width),
-      [%cx "background: $background"],
+      [%css "background: $background"],
       switch (backgroundHover) {
-        | Some(background) => [%cx ":hover { background: $background; }"]
+        | Some(background) => [%css ":hover { background: $background; }"]
         | None => ""
       },
       switch (borderRadius) {
         | `Zero => ""
-        | `Rounded => [%cx "border-radius: 2px"]
-        | `Full => [%cx "border-radius: 999px"]
+        | `Rounded => [%css "border-radius: 2px"]
+        | `Full => [%css "border-radius: 999px"]
       },
       Shadow.styles(shadow),
       Border.styles(border),
@@ -101,7 +101,7 @@ let make =
       Spacer.spaceDirectionStyles("padding", "right", paddingRight),
     ]);
 
-  <Wrapper name="Box">
+  <DataAttribute name="Box">
     <div className ?onClick ?onMouseOver ?onMouseLeave> children </div>
-  </Wrapper>
+  </DataAttribute>
 };

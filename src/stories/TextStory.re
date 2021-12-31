@@ -47,4 +47,4 @@ module Text = {
 
 let module_ = [%bs.raw "module"];
 
-Story.(storiesOf("Text", module_)->(add("Text", () => <Text />)));
+let _ = Story.(storiesOf("Text", module_)->(add("Text", () => <Text />)));

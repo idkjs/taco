@@ -6,6 +6,7 @@ module Overlay = [%styled.div {|
   left: 0px;
   right: 0px;
   height: 100vh;
+  background: $black;
   z-index: 1000;
   user-select: none;
 |}];
@@ -16,13 +17,13 @@ module Overlay = [%styled.div {|
 let make = (~isOpen=false, ~children=?) => {
 
   <Animate play=isOpen>
-    <Wrapper name="Overlay">
+    <DataAttribute name="Overlay">
       <Overlay>
         {switch (children) {
         | None => React.null
         | Some(c) => c
         }}
       </Overlay>
-    </Wrapper>
+    </DataAttribute>
   </Animate>;
 }

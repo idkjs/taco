@@ -67,4 +67,4 @@ module Inlines = {
 
 let module_ = [%bs.raw "module"];
 
-Story.(storiesOf("Inline", module_)->(add("Inline", () => <Inlines />)));
+let _ = Story.(storiesOf("Inline", module_)->(add("Inline", () => <Inlines />)));

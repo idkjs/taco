@@ -310,4 +310,4 @@ module Boxes = {
 
 let module_ = [%bs.raw "module"];
 
-Story.(storiesOf("Box", module_)->(add("Box", () => <Boxes />)));
+let _ = Story.(storiesOf("Box", module_)->(add("Box", () => <Boxes />)));

@@ -139,4 +139,4 @@ module Algins = {
     </Stack>;
 };
 let module_ = [%bs.raw "module"];
-Story.(storiesOf("Align", module_)->(add("Align", () => <Algins />)));
+let _ = Story.(storiesOf("Align", module_)->(add("Align", () => <Algins />)));

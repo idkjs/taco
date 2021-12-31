@@ -1,7 +1,7 @@
 [@genType]
 type align = [ `Start | `Center | `End ];
 
-let inline = [%cx {|
+let inline = [%css {|
   display: inline-flex;
   flex-wrap: wrap;
   /* outline: none; */
@@ -13,15 +13,15 @@ let make = (~align=`Center, ~children) => {
   let className = Cn.make([
     inline,
     switch (align) {
-      | `Start => [%cx "align-items: flex-start"]
-      | `Center => [%cx "align-items: center"]
-      | `End => [%cx "align-items: flex-end"]
+      | `Start => [%css "align-items: flex-start"]
+      | `Center => [%css "align-items: center"]
+      | `End => [%css "align-items: flex-end"]
       }
   ]);
 
-  <Wrapper name="Inline">
+  <DataAttribute name="Inline">
     <span className>
       children
     </span>
-  </Wrapper>
+  </DataAttribute>
 }

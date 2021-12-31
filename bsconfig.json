@@ -1,56 +1,55 @@
 {
-  "name": "taco-ui",
-  "version": "0.1.1",
-  "namespace": true,
-  "reason": {
-    "react-jsx": 3
-  },
-  "sources": [
-    {
-      "dir": "src/components"
+    "name": "taco-ui",
+    "version": "0.1.1",
+    "namespace": true,
+    "reason": {
+      "react-jsx": 3
     },
-    {
-      "dir": "src/stories",
-      "type": "dev",
-      "subdirs": true
-    }
-  ],
-  "package-specs": [
-    {
-      "module": "es6",
-      "in-source": true
-    }
-  ],
-  "suffix": ".bs.js",
-  "bs-dependencies": [
-    "reason-react",
-    "bs-css-emotion",
-    "bs-css",
-    "re-classnames",
-    "bs-webapi"
-  ],
-  "bs-dev-dependencies": [
-    "@glennsl/bs-jest",
-    "bs-storybook",
-    "bs-react-testing-library"
-  ],
-  "ppx-flags": [
-    "@davesnx/styled-ppx/ppx"
-  ],
-  "warnings": {
-    "error": "+5"
-  },
-  "bsc-flags": [
-    "-bs-super-errors",
-    "-bs-no-version-header",
-    "-open Belt"
-  ],
-  "gentypeconfig": {
-    "language": "typescript",
-    "shims": {},
-    "debug": {
-      "all": false,
-      "basic": false
+    "sources": [
+      {
+        "dir": "src/components"
+      },
+      {
+        "dir": "src/stories",
+        "type": "dev",
+        "subdirs": true
+      }
+    ],
+    "package-specs": [
+      {
+        "module": "es6",
+        "in-source": true
+      }
+    ],
+    "suffix": ".bs.js",
+    "bs-dependencies": [
+      "reason-react",
+      "@ahrefs/bs-emotion",
+      "re-classnames",
+      "bs-webapi"
+    ],
+    "bs-dev-dependencies": [
+      "@glennsl/bs-jest",
+      "bs-storybook",
+      "bs-react-testing-library"
+    ],ga
+    "ppx-flags": [
+      "@davesnx/styled-ppx/styled-ppx"
+    ],
+    "warnings": {
+      "error": "+5-109"
+    },
+    "bsc-flags": [
+      "-bs-super-errors",
+      "-bs-no-version-header",
+      "-open Belt"
+    ],
+    "gentypeconfig": {
+      "language": "typescript",
+      "shims": {},
+      "debug": {
+        "all": false,
+        "basic": false
+      }
     }
   }
-}
